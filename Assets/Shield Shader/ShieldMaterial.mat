@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShieldMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: fdbb37d1dbdc978478feb80a750490ae,
+  m_Shader: {fileID: -6465566751694194690, guid: ad504b57a52c43a40ba73150db427a09,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 5000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -44,6 +44,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _EffectTexture:
+        m_Texture: {fileID: 2800000, guid: bbc47b66234ed0741bef63594017e03d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,10 +72,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture2D:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -86,9 +86,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha: 0.7
+    - _Alpha: 0.508
     - _AlphaClip: 0
+    - _AlphaHit: 0.602
     - _AlphaToMask: 0
+    - _BaseFresnelPower: 9.95
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -96,42 +98,54 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DepthOffset: 0.1
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisolveEdgeThickness: 0.45
-    - _DisolveShader: 0.175
+    - _Dissolve: 0.18
+    - _DissolveEdgeThickness: 0.0564
+    - _DissolveStartHeight: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FresnelPower: 1
+    - _FresnelPower: 7.93
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GradientPower: 0.031
+    - _GradientScale: 185.1
+    - _IsHit: 0
+    - _IsVisible: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _OutlineFresnel: 5.43
+    - _OutlineFresnelPower: 8.72
     - _Parallax: 0.005
-    - _QueueControl: 1
+    - _PixelatedPower: 2000
+    - _PixelatedScale: 3000
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ShrinkSpeed: 0
+    - _Size: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _TextureScrollingSpeed: 0.1
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _useFresnel: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _DisolveEdgeColor: {r: 1, g: 0, b: 0.020209312, a: 0}
+    - _BaseColor: {r: 4.759381, g: 0, b: 0.09967196, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 0}
+    - _OutlineColor: {r: 135.7325, g: 21.128174, b: 21.128174, a: 0}
+    - _PixelatedPower: {r: -0.5, g: 0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TextureScrollingSpeed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _TextureTiling: {r: 1.75, g: 1.75, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &3043207737947420653
+--- !u!114 &104985789733583388
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
